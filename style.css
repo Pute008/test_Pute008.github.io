@@ -1,0 +1,159 @@
+/* bakgrunnsfargen til navigatoren er anig linjene */
+body {
+    margin: 0;
+}
+
+/* navigatoren har en farge og er 10px stor */
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(156, 156, 156);
+    padding: 10px;
+    width: 100%;
+}
+
+/* lenkene i navigatorene forandrer farge, blir større osv */
+nav a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: large;
+    font-weight: bold;
+    padding: 1rem;
+    color: black;
+    border-radius: 1rem;
+}
+
+/* når du er anig lenkene i navigatoren vil det komme en farge rundt lenkene */
+nav a:hover {
+    background-color: rgb(103, 103, 103);
+}
+
+/* Punktene som er synlige i navigatoren forsvinner */
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* forandrer bildestørrelse */
+#bilde {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+/* videoen som er på nettsiden skal være midtstilt */
+iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+/* det som er "h1" skal være 10px mer til høyre */
+h1 {
+    margin-left: 10px;
+}
+
+/* det som er i "p" skal være 10px mer til høyre */
+div {
+    margin-left: 10px;
+}
+
+
+.slider {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+}
+  
+
+
+.slides {
+    display: flex;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    
+    
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    /* størrelsen på bildet */
+    height: 300px;
+    /* mellombrommet mellom bildene */
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+  .slides > div:target {
+    /* transform: scale(0.8); */
+  }
+  .author-info {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .author-info a {
+    color: white;
+  }
+  img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+  }
